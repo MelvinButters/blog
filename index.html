@@ -47,6 +47,25 @@
             width: 100%;
             bottom: 0;
         }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            border: none;
+            margin-bottom: 20px;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        a:hover {
+            color: #0066cc;
+        }
     </style>
 </head>
 <body>
@@ -55,27 +74,73 @@
     </header>
 
     <div class="container">
-        <section class="post">
-            <h2>Blog Post Title 1</h2>
-            <p>Posted on April 6, 2025</p>
-            <p>This is the introduction to the first blog post. You can add more content here.</p>
-        </section>
+        <button onclick="sortPosts()">Sort by Date</button>
 
-        <section class="post">
-            <h2>Blog Post Title 2</h2>
-            <p>Posted on April 5, 2025</p>
-            <p>This is the introduction to the second blog post. You can add more content here.</p>
-        </section>
-
-        <section class="post">
-            <h2>Blog Post Title 3</h2>
-            <p>Posted on April 4, 2025</p>
-            <p>This is the introduction to the third blog post. You can add more content here.</p>
-        </section>
+        <div id="post-container">
+            <!-- Blog posts will be dynamically inserted here -->
+        </div>
     </div>
 
     <footer>
         <p>&copy; 2025 My Blog. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Blog posts data (in an array)
+        const posts = [
+            {
+                title: "Blog Post Title 1",
+                date: "2025-04-06",
+                content: "This is the introduction to the first blog post. You can add more content here.",
+                link: "post1.html"  // Placeholder link to the individual post
+            },
+            {
+                title: "Blog Post Title 2",
+                date: "2025-04-05",
+                content: "This is the introduction to the second blog post. You can add more content here.",
+                link: "post2.html"  // Placeholder link to the individual post
+            },
+            {
+                title: "Blog Post Title 3",
+                date: "2025-04-04",
+                content: "This is the introduction to the third blog post. You can add more content here.",
+                link: "post3.html"  // Placeholder link to the individual post
+            }
+        ];
+
+        // Function to render posts to the page
+        function renderPosts() {
+            const postContainer = document.getElementById('post-container');
+            postContainer.innerHTML = ''; // Clear current posts
+            posts.forEach(post => {
+                const postElement = document.createElement('section');
+                postElement.classList.add('post');
+                postElement.innerHTML = `
+                    <h2><a href="${post.link}">${post.title}</a></h2>
+                    <p>Posted on ${formatDateForAustralia(post.date)}</p>
+                    <p>${post.content}</p>
+                `;
+                postContainer.appendChild(postElement);
+            });
+        }
+
+        // Function to format date in DD/MM/YYYY (Australian format)
+        function formatDateForAustralia(dateString) {
+            const date = new Date(dateString);
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+            const year = date.getFullYear();
+            return `${day}/${month}/${year}`;
+        }
+
+        // Function to sort posts by date (newest first)
+        function sortPosts() {
+            posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+            renderPosts(); // Re-render the posts after sorting
+        }
+
+        // Initially render the posts
+        renderPosts();
+    </script>
 </body>
 </html>
