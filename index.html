@@ -74,7 +74,7 @@
     </header>
 
     <div class="container">
-        <button id="sort-button" onclick="sortPosts()">Sort by Date (Descending)</button>
+        <button id="sort-button" onclick="sortPosts()">Sort by Date (Ascending)</button>
 
         <div id="post-container">
             <!-- Blog posts will be dynamically inserted here -->
@@ -108,7 +108,7 @@
             }
         ];
 
-        let isDescending = true; // Track the current sort order
+        let isDescending = false; // Track the current sort order (starts with ascending)
 
         // Function to render posts to the page
         function renderPosts() {
@@ -117,7 +117,7 @@
             posts.forEach(post => {
                 const postElement = document.createElement('section');
                 postElement.classList.add('post');
-                postElement.innerHTML = `
+                postElement.innerHTML = ` 
                     <h2><a href="${post.link}">${post.title}</a></h2>
                     <p>Posted on ${formatDateForAustralia(post.date)}</p>
                     <p>${post.content}</p>
@@ -140,13 +140,13 @@
             if (isDescending) {
                 // Sort by date in descending order (newest first)
                 posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-                // Change button text to "Sort by Date (Ascending)"
-                document.getElementById("sort-button").textContent = "Sort by Date (Ascending)";
+                // Change button text to "Older"
+                document.getElementById("sort-button").textContent = "Sort by Date (Older)";
             } else {
                 // Sort by date in ascending order (oldest first)
                 posts.sort((a, b) => new Date(a.date) - new Date(b.date));
-                // Change button text to "Sort by Date (Descending)"
-                document.getElementById("sort-button").textContent = "Sort by Date (Descending)";
+                // Change button text to "Newer"
+                document.getElementById("sort-button").textContent = "Sort by Date (Newer)";
             }
             isDescending = !isDescending; // Toggle the sort order
             renderPosts(); // Re-render the posts after sorting
