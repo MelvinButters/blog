@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Article - Game Master Blog</title>
+    <title>Game Master Blog - Articles</title>
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/0/0e/Dungeons_and_dragons_logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> <!-- Cinzel Font -->
 
@@ -46,48 +46,34 @@
             display: block;
         }
 
-        .form-container {
+        .article-list {
+            margin-top: 40px;
+        }
+
+        .article-item {
             background-color: #1e1e1e;
             padding: 20px;
             border-radius: 5px;
-            margin-top: 20px;
+            margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        label {
-            font-size: 1rem;
-            color: #e0e0e0;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            border: 1px solid #555;
-            background-color: #2c2c2c;
+        .article-item h2 {
+            font-size: 1.8rem;
             color: #e0e0e0;
         }
 
-        input[type="url"], input[type="text"], textarea {
-            font-size: 1rem;
+        .article-item a {
+            color: #E27D60;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-top: 10px;
+            transition: color 0.3s;
         }
 
-        button {
-            background-color: #E27D60;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #d57f58;
+        .article-item a:hover {
+            color: #d57f58;
         }
 
         footer {
@@ -97,7 +83,6 @@
             background-color: #1f1f1f;
             color: white;
         }
-
     </style>
 </head>
 
@@ -107,49 +92,31 @@
         <h1><span>Melvin Butters</span><span>Game Master Blog</span></h1>
     </header>
 
-    <div class="form-container">
-        <h2>Add a New Article</h2>
-        <form id="article-form">
-            <label for="title">Article Title</label>
-            <input type="text" id="title" name="title" placeholder="Enter article title" required>
+    <div class="article-list">
+        <!-- Article 1 -->
+        <div class="article-item">
+            <h2>Creating the Perfect D&D Campaign World</h2>
+            <a href="articles/creating-perfect-campaign-world.html" target="_blank">Read Full Article</a>
+        </div>
 
-            <label for="url">Article URL</label>
-            <input type="url" id="url" name="url" placeholder="Enter the URL of the article" required>
+        <!-- Article 2 -->
+        <div class="article-item">
+            <h2>5 Common Mistakes New Dungeon Masters Make</h2>
+            <a href="articles/common-dm-mistakes.html" target="_blank">Read Full Article</a>
+        </div>
 
-            <label for="date">Date (Australian Format - DD/MM/YYYY)</label>
-            <input type="text" id="date" name="date" placeholder="e.g., 06/04/2025" required>
+        <!-- Article 3 -->
+        <div class="article-item">
+            <h2>Top 10 NPC Ideas for Your D&D Campaign</h2>
+            <a href="articles/top-npc-ideas.html" target="_blank">Read Full Article</a>
+        </div>
 
-            <label for="content">Article Content</label>
-            <textarea id="content" name="content" rows="6" placeholder="Enter article content" required></textarea>
-
-            <button type="submit">Add Article</button>
-        </form>
+        <!-- Add more articles as needed -->
     </div>
 
     <footer>
         <p>&copy; 2025 Adventures in Dungeons & Dragons. All rights reserved.</p>
     </footer>
-
-    <script>
-        document.getElementById('article-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const title = document.getElementById('title').value;
-            const url = document.getElementById('url').value;
-            const date = document.getElementById('date').value;
-            const content = document.getElementById('content').value;
-
-            const newArticle = {
-                title: title,
-                url: url,
-                date: date.split('/').reverse().join('-'), // Convert DD/MM/YYYY to YYYY-MM-DD format for sorting
-                content: content
-            };
-
-            // Handle article submission here (e.g., store it locally or in a database)
-            alert('Article Added!');
-        });
-    </script>
 
 </body>
 
