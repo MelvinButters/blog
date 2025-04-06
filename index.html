@@ -14,6 +14,15 @@
             box-sizing: border-box;
         }
 
+        /* Importing Soria font */
+        @font-face {
+            font-family: 'Soria';
+            src: url('fonts/soria.woff2') format('woff2'),
+                 url('fonts/soria.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #121212; /* Dark background */
@@ -31,10 +40,13 @@
             text-align: center;
         }
 
+        /* Applying Soria font to the title */
         header h1 {
-            font-size: 3rem;
+            font-family: 'Soria', serif;
+            font-size: 4rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            color: #E27D60; /* A touch of color for the title */
         }
 
         nav {
@@ -64,9 +76,9 @@
         }
 
         .search-bar input[type="text"] {
-            padding: 10px;
+            padding: 8px 15px;
             font-size: 1rem;
-            border: 1px solid #555; /* Dark border */
+            border: 1px solid #555; /* Dark grey border */
             border-radius: 5px;
             width: 300px;
             background-color: #2c2c2c; /* Dark background for input */
@@ -74,7 +86,7 @@
         }
 
         .search-bar button {
-            padding: 10px;
+            padding: 8px 15px;
             font-size: 1rem;
             background-color: #5C5C5C;
             color: white;
@@ -138,11 +150,11 @@
     <header>
         <h1>Adventures in Dungeons & Dragons</h1>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Campaigns</a>
-            <a href="#">DM Tips</a>
+            <a href="#">The Characters</a>
+            <a href="#">Locations</a>
             <a href="#">NPCs</a>
-            <a href="#">Resources</a>
+            <a href="#">The Story So Far</a>
+            <a href="#">Magic Items</a>
         </nav>
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Search blog posts..." />
