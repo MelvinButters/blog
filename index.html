@@ -74,7 +74,7 @@
     </header>
 
     <div class="container">
-        <button onclick="sortPosts()">Sort by Date</button>
+        <button id="sort-button" onclick="sortPosts()">Sort by Date (Descending)</button>
 
         <div id="post-container">
             <!-- Blog posts will be dynamically inserted here -->
@@ -108,6 +108,8 @@
             }
         ];
 
+        let isDescending = true; // Track the current sort order
+
         // Function to render posts to the page
         function renderPosts() {
             const postContainer = document.getElementById('post-container');
@@ -133,9 +135,20 @@
             return `${day}/${month}/${year}`;
         }
 
-        // Function to sort posts by date (newest first)
+        // Function to sort posts by date (newest first or oldest first)
         function sortPosts() {
-            posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+            if (isDescending) {
+                // Sort by date in descending order (newest first)
+                posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+                // Change button text to "Sort by Date (Ascending)"
+                document.getElementById("sort-button").textContent = "Sort by Date (Ascending)";
+            } else {
+                // Sort by date in ascending order (oldest first)
+                posts.sort((a, b) => new Date(a.date) - new Date(b.date));
+                // Change button text to "Sort by Date (Descending)"
+                document.getElementById("sort-button").textContent = "Sort by Date (Descending)";
+            }
+            isDescending = !isDescending; // Toggle the sort order
             renderPosts(); // Re-render the posts after sorting
         }
 
