@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your First Session</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            font-size: 1em;
+            margin-bottom: 5px;
+            display: block;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add a New Article</h1>
+    <form id="article-form">
+        <label for="title">Article Title</label>
+        <input type="text" id="title" name="title" required>
+        
+        <label for="date">06/04/2025</label>
+        <input type="text" id="date" name="date" placeholder="e.g., 06/04/2025" required>
+        
+        <label for="content">Example of content of starting your first session</label>
+        <textarea id="content" name="content" rows="6" required></textarea>
+        
+        <button type="submit">Add Article</button>
+    </form>
+
+    <script>
+        document.getElementById('article-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const title = document.getElementById('title').value;
+            const date = document.getElementById('date').value;
+            const content = document.getElementById('content').value;
+
+            const newArticle = {
+                title: title,
+                date: date.split('/').reverse().join('-'), // Convert DD/MM/YYYY to YYYY-MM-DD format for sorting
+                content: content
+            };
+
+            // You can handle the newArticle object to store the data in local storage, database, or pass to the first page.
+            alert('Article Added!');
+        });
+    </script>
+</body>
+</html>
