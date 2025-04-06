@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melvin Butters - Game Master Blog</title>
+    <title>The Curse of Corvus Farm - Adventure Introduction</title>
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/0/0e/Dungeons_and_dragons_logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> <!-- Adding Cinzel font -->
 
@@ -75,68 +75,38 @@
             background-color: #E27D60; /* Highlight color */
         }
 
-        .search-bar {
+        .adventure-introduction {
             margin-top: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .search-bar input[type="text"] {
-            padding: 8px 15px;
-            font-size: 1rem;
-            border: 1px solid #555; /* Dark grey border */
-            border-radius: 5px;
-            width: 300px;
-            background-color: #2c2c2c; /* Dark background for input */
-            color: #e0e0e0; /* Light text in input */
-        }
-
-        .search-bar button {
-            padding: 8px 15px;
-            font-size: 1rem;
-            background-color: #5C5C5C;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-left: 10px;
-        }
-
-        .search-bar button:hover {
-            background-color: #E27D60; /* Hover effect for search button */
-        }
-
-        .blog-posts {
-            margin-top: 40px;
-        }
-
-        .post {
-            background-color: #1e1e1e; /* Dark post background */
+            background-color: #1e1e1e;
             padding: 20px;
             border-radius: 5px;
-            margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .post h2 {
+        .adventure-introduction h2 {
             font-size: 2rem;
-            color: #e0e0e0; /* Light text for title */
+            color: #e0e0e0;
         }
 
-        .post p {
+        .adventure-introduction p {
             font-size: 1.2rem;
-            color: #b0b0b0; /* Slightly lighter text for paragraph */
+            color: #b0b0b0;
             margin-top: 10px;
         }
 
-        .post .read-more {
-            display: inline-block;
-            margin-top: 15px;
-            color: #E27D60;
-            text-decoration: none;
+        .download-links {
+            margin-top: 20px;
         }
 
-        .post .read-more:hover {
+        .download-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #E27D60;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .download-links a:hover {
             text-decoration: underline;
         }
 
@@ -147,70 +117,38 @@
             background-color: #1f1f1f; /* Dark footer background */
             color: white;
         }
-
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1><span>Melvin Butters</span><span>Game Master Blog</span></h1>
+        <h1><span>The Curse of Corvus Farm</span><span>Adventure Introduction</span></h1>
         <nav>
             <a href="#">DM Articles</a>
             <a href="#">Free Adventures</a>
             <a href="#">Homebrew Items</a>
             <a href="#">Homebrew Classes</a>
         </nav>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search blog posts..." />
-            <button onclick="searchPosts()">Search</button>
-        </div>
     </header>
 
-    <div class="blog-posts">
-        <!-- Adventure Introduction -->
-        <div class="post" id="post1">
-            <h2>Into the Abyss: A D&D Adventure</h2>
-            <p>Deep within the shadows of the forgotten lands, a hidden portal to the Abyss has been unearthed. The ancient evil that resides within stirs once more, threatening to spill forth into the world. Will your party brave the dangers of this forsaken place, unravel its mysteries, and put an end to the nightmare, or will they fall prey to the unrelenting horrors lurking within?</p>
-            <p>Prepare yourself, adventurer, for a journey where courage, wit, and strength will be tested. The Abyss awaits, and its dark secrets may change the fate of the realms forever...</p>
-            <a href="#" class="read-more">Read More</a>
-        </div>
+    <div class="adventure-introduction">
+        <h2>Introduction</h2>
+        <p><strong>The Curse of Corvus Farm</strong> is a 5th Edition compatible adventure designed for a party of four level 3 characters. In this adventure, your players will uncover the tragic story of Corvus Greaves, a farmer cursed to walk the earth as a scarecrow. It is a story of redemption, courage, and the fight against overwhelming odds. The players will journey through the haunted Greaves farm, navigate the eerie corn maze, and confront the Crow Folk that haunt Corvus’s fields.</p>
 
-        <!-- Link for PDF and Maps -->
-        <div class="post" id="post2">
-            <h2>Download Your Adventure Materials</h2>
-            <p>Download the full PDF of "Into the Abyss" and all the maps needed to guide your players through the treacherous landscapes and infernal chambers.</p>
-            <ul>
-                <li><a href="adventures/CurseOfCovrusFarm/assets/The Curse of Corvus Farm Adventure.pdf" class="read-more">Download PDF</a></li>
-                <li><a href="https://github.com/MelvinButters/blog/blob/main/adventures/CurseOfCovrusFarm/assets/Corn%20Maze%20nogrid.jpg?raw=true" class="read-more">Download Corn Maze Map</a></li>
-                <li><a href="https://github.com/MelvinButters/blog/blob/main/adventures/CurseOfCovrusFarm/assets/Wheat%20Field%20nongrid.jpg?raw=true" class="read-more">Download Wheat Field Mapp</a></li>
-            </ul>
-        </div>
+        <p>The adventure includes multiple hooks, opportunities for roleplaying, combat, and environmental challenges. It is designed to be modular, allowing you to customize the experience for your campaign or use it as a standalone one-shot adventure.</p>
+    </div>
 
+    <div class="download-links">
+        <h3>Downloadable Resources</h3>
+        <a href="adventures/CurseOfCovrusFarm/assets/The Curse of Corvus Farm Adventure.pdf" download>Download Adventure PDF</a>
+        <a href="https://github.com/MelvinButters/blog/blob/main/adventures/CurseOfCovrusFarm/assets/Corn%20Maze%20nogrid.jpg?raw=true" download>Download Wheat Field (Non-Gridded)</a>
+        <a href="https://github.com/MelvinButters/blog/blob/main/adventures/CurseOfCovrusFarm/assets/Corn%20Maze%20nogrid.jpg?raw=true" download>Download Corn Maze Map (Non-Gridded)</a>
     </div>
 
     <footer>
-        <p>&copy; 2025 Adventures in Dungeons & Dragons. All rights reserved.</p>
+        <p>&copy; 2025 Melvin Butters. All rights reserved. Adventure materials are free to use and share.</p>
     </footer>
-
-    <script>
-        // JavaScript to handle search functionality
-        function searchPosts() {
-            const input = document.getElementById("searchInput").value.toLowerCase();
-            const posts = document.querySelectorAll(".post");
-
-            posts.forEach(post => {
-                const title = post.querySelector("h2").innerText.toLowerCase();
-                const content = post.querySelector("p").innerText.toLowerCase();
-
-                if (title.includes(input) || content.includes(input)) {
-                    post.style.display = "block";
-                } else {
-                    post.style.display = "none";
-                }
-            });
-        }
-    </script>
 
 </body>
 
