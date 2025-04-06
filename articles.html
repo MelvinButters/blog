@@ -1,1 +1,104 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Storage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .article-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .article-item {
+            background-color: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .article-title {
+            font-size: 1.5em;
+            color: #0073e6;
+        }
+        .article-date {
+            font-size: 0.9em;
+            color: #888;
+        }
+        .article-content {
+            font-size: 1.1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Article Storage</h1>
+    <ul id="article-list" class="article-list">
+        <!-- Articles will be inserted here -->
+    </ul>
+
+    <script>
+        const articles = [
+            {
+                title: "First Article",
+                date: "2025-04-06",
+                content: "This is the content of the first article."
+            },
+            {
+                title: "Second Article",
+                date: "2024-11-15",
+                content: "This is the content of the second article."
+            },
+            {
+                title: "Third Article",
+                date: "2023-08-25",
+                content: "This is the content of the third article."
+            }
+        ];
+
+        // Function to sort articles by date (Australian format - DD/MM/YYYY)
+        articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        // Function to display articles
+        function displayArticles() {
+            const articleList = document.getElementById('article-list');
+            articleList.innerHTML = ''; // Clear existing articles
+
+            articles.forEach(article => {
+                const listItem = document.createElement('li');
+                listItem.className = 'article-item';
+                
+                const title = document.createElement('h2');
+                title.className = 'article-title';
+                title.textContent = article.title;
+                
+                const date = document.createElement('p');
+                date.className = 'article-date';
+                const formattedDate = new Date(article.date).toLocaleDateString('en-AU');
+                date.textContent = `Published on: ${formattedDate}`;
+                
+                const content = document.createElement('p');
+                content.className = 'article-content';
+                content.textContent = article.content;
+
+                listItem.appendChild(title);
+                listItem.appendChild(date);
+                listItem.appendChild(content);
+                articleList.appendChild(listItem);
+            });
+        }
+
+        // Call the function to display articles
+        displayArticles();
+    </script>
+</body>
+</html>
