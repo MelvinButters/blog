@@ -6,21 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melvin Butters - Game Master Blog</title>
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/0/0e/Dungeons_and_dragons_logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> <!-- Adding Cinzel font -->
+
     <style>
         /* Reset and General Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        /* Importing Soria font */
-        @font-face {
-            font-family: 'Soria';
-            src: url('fonts/soria.woff2') format('woff2'),
-                 url('fonts/soria.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
         }
 
         body {
@@ -40,14 +33,21 @@
             text-align: center;
         }
 
-        /* Applying Soria font to the title and setting the color back to white */
+        /* Apply Cinzel font and adjust for smaller sizes */
         header h1 {
-            font-family: 'Soria', serif;
-            font-size: 4rem;
+            font-family: 'Cinzel', serif; /* Apply D&D style font */
+            font-size: 3.5rem; /* Smaller title size */
             text-transform: uppercase;
             letter-spacing: 3px;
-            color: white; /* Set the title color to white */
-            line-height: 1.2; /* Adjust line height for better spacing */
+            color: white;
+            line-height: 1.2;
+        }
+
+        /* Responsive adjustments for smaller screen sizes */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem; /* Make title smaller on mobile */
+            }
         }
 
         header h1 span {
@@ -168,7 +168,6 @@
     </header>
 
     <div class="blog-posts">
-
         <!-- Post 1 -->
         <div class="post" id="post1">
             <h2>Creating the Perfect D&D Campaign World</h2>
