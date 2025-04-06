@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adventures of the Realms | Dungeons & Dragons Blog</title>
+    <title>Worlds Beyond Number Campaign 2</title>
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Ghibli_Logo.svg/2880px-Ghibli_Logo.svg.png" type="image/png">
     <style>
-        /* Basic Reset and Layout */
+        /* Basic reset and font imports */
         * {
             margin: 0;
             padding: 0;
@@ -17,191 +17,127 @@
         html,
         body {
             height: 100%;
-            font-family: 'Georgia', serif;
-            background-color: #1f1f1f;
-            color: #dcdcdc;
+            overflow-x: hidden;
+            font-family: 'Georgia', serif; /* A more vintage and elegant font */
+            background-color: #F4E1D2; /* Soft, earthy background */
+            color: #5B4E40;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: flex-start; /* Align content to the top */
             align-items: center;
-            overflow-x: hidden;
-            margin: 0;
             padding: 0;
+            background-image: url('https://raw.githubusercontent.com/MelvinButters/melvinwebsite/main/images/GhibliWallpaper.png'); /* Custom background image */
+            background-size: cover; /* Ensure the image covers the entire area */
+            background-position: center; /* Keep the image centered */
+            background-attachment: fixed; /* Parallax scrolling effect (optional) */
         }
 
-        body {
-            background-image: url('https://images.unsplash.com/photo-1519290272595-e8a6a22d2541'); /* Background image of a mystical forest */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        /* Header Section */
-        header {
-            width: 100%;
-            padding: 40px 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
-
+        /* Title Styling */
         h1 {
-            font-size: 3.5rem;
-            color: #fff;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-            letter-spacing: 4px;
+            font-size: 4rem;
+            color: white; /* Changed text color to white */
+            text-align: center;
+            margin-top: 150px; /* Set margin-top to 80px */
+            margin-bottom: 0; /* Removed margin-bottom */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), /* Tight, sharp shadow */
+                         -2px -2px 4px rgba(0, 0, 0, 0.8), /* Shadow on all sides */
+                         2px -2px 4px rgba(0, 0, 0, 0.8), /* Sharp contrast */
+                         -2px 2px 4px rgba(0, 0, 0, 0.8); /* Balanced shadow */
+            font-family: 'Georgia', serif;
+            letter-spacing: 2px;
             text-transform: uppercase;
         }
 
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            padding: 12px 20px;
-            border-radius: 30px;
-            background-color: rgba(200, 100, 50, 0.7);
-            transition: 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #ff5733;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-            transform: scale(1.05);
-        }
-
-        /* Main Content */
-        main {
-            width: 80%;
-            max-width: 1200px;
-            margin-top: 50px;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            color: #e7c0a2;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-        }
-
-        .intro {
-            font-size: 1.3rem;
-            margin: 20px 0;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .intro p {
-            margin-bottom: 15px;
-        }
-
-        .post-links {
+        /* Main Links Container */
+        .links-container {
             display: flex;
             gap: 30px;
             justify-content: center;
+            margin-top: 40px; /* Adjusted margin to move links up */
             flex-wrap: wrap;
+            background-color: rgba(255, 255, 255, 0.5); /* Made the background more transparent */
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
-        .post-link {
+        /* Link styling */
+        .links-container a {
             text-decoration: none;
-            color: #fff;
-            background-color: rgba(46, 204, 113, 0.7);
+            font-size: 1.5rem;
+            color: white; /* White text */
+            background-color: rgba(246, 214, 161, 0.7); /* Transparent pastel yellow */
             padding: 12px 30px;
             border-radius: 25px;
-            font-weight: bold;
-            font-size: 1.2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            font-weight: bold;
+            position: relative; /* Make sure the text and pseudo-element align properly */
         }
 
-        .post-link:hover {
-            background-color: #2ecc71;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-            transform: scale(1.05);
-        }
-
-        /* Footer Section */
-        footer {
-            margin-top: 50px;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px 0;
+        /* Adding text outline (black outline on white text) */
+        .links-container a::before {
+            content: ''; /* No content here, just outline */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
             width: 100%;
-            text-align: center;
-            color: #dcdcdc;
+            height: 100%;
+            background: transparent;
+            border: 2px solid black; /* Create a black border around the text */
+            border-radius: 25px; /* Same rounded corners as the link */
+            filter: blur(1px); /* Keep the text outline blurred */
+            transform: translate(-2px, -2px); /* Adjust the outline position */
         }
 
-        footer p {
-            font-size: 1rem;
+        /* On hover change the background and make the text pop */
+        .links-container a:hover {
+            background-color: #E27D60; /* Soft coral color on hover */
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05); /* Slightly enlarge the link */
+            color: #FFF;
         }
 
-        /* Mobile Responsiveness */
+        /* Ensure the text outline stays in place and doesn't shift on hover */
+        .links-container a:hover::before {
+            filter: blur(0); /* Keep the outline sharp */
+            transform: translate(-2px, -2px); /* Prevent shifting */
+        }
+
+        /* Styling for mobile responsiveness */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
 
-            h2 {
-                font-size: 2rem;
+            .links-container {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .intro {
-                font-size: 1.1rem;
-                padding: 10px;
-            }
-
-            nav a {
-                font-size: 1rem;
-                padding: 8px 15px;
-            }
-
-            .post-link {
-                font-size: 1rem;
-                padding: 10px 25px;
+            .links-container a {
+                font-size: 1.2rem;
+                padding: 10px 20px;
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Adventures of the Realms</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#campaigns">Campaigns</a>
-            <a href="#guides">Guides</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
-    <!-- Main Content Section -->
-    <main>
-        <h2>Welcome to the Realms of Imagination</h2>
-        <div class="intro">
-            <p>Welcome to the official blog for all things Dungeons & Dragons! Whether you're a Dungeon Master or a player, you’ll find everything you need to enhance your adventures. From campaign ideas to character building tips, explore the endless possibilities of the game.</p>
-            <p>Join us as we dive deep into the world of tabletop roleplaying games, sharing insights, stories, and resources for your D&D journeys!</p>
-        </div>
+    <h1>Worlds Beyond Number Campaign 2</h1>
 
-        <div class="post-links">
-            <a href="#post1" class="post-link">Latest Campaign Stories</a>
-            <a href="#post2" class="post-link">Beginner’s Guide to D&D</a>
-            <a href="#post3" class="post-link">Mastering Dungeon Mastery</a>
-        </div>
-    </main>
+    <!-- Links to Other Pages -->
+    <div class="links-container">
+        <a href="locations.html">🌍 Locations</a>
+        <a href="NPCs.html">👥 NPCs</a>
+        <a href="story.html">📜 The Story So Far</a>
+        <a href="quests.html">🎲 Quests</a>
+    </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Adventures of the Realms | All Rights Reserved</p>
-    </footer>
 </body>
 
 </html>
