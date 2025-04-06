@@ -108,7 +108,7 @@
             }
         ];
 
-        let isDescending = false; // Track the current sort order (starts with ascending)
+        let isDescending = true; // Track the current sort order (starts with descending)
 
         // Function to render posts to the page
         function renderPosts() {
@@ -140,19 +140,19 @@
             if (isDescending) {
                 // Sort by date in descending order (newest first)
                 posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-                // Change button text to "Older"
+                // Change button text to "Sort by Date (Older)"
                 document.getElementById("sort-button").textContent = "Sort by Date (Older)";
             } else {
                 // Sort by date in ascending order (oldest first)
                 posts.sort((a, b) => new Date(a.date) - new Date(b.date));
-                // Change button text to "Newer"
+                // Change button text to "Sort by Date (Newer)"
                 document.getElementById("sort-button").textContent = "Sort by Date (Newer)";
             }
             isDescending = !isDescending; // Toggle the sort order
             renderPosts(); // Re-render the posts after sorting
         }
 
-        // Initially render the posts
+        // Initially render the posts in descending order (newest first)
         renderPosts();
     </script>
 </body>
