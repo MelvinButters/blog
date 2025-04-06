@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melvin Butters - Game Master Blog</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/0/0e/Dungeons_and_dragons_logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> <!-- Adding Cinzel font -->
+
+    <style>
+        /* Reset and General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text */
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #1f1f1f; /* Dark header background */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Apply Cinzel font and adjust for smaller sizes */
+        header h1 {
+            font-family: 'Cinzel', serif; /* Apply D&D style font */
+            font-size: 2.45rem; /* 30% smaller title size */
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: white;
+            line-height: 1.2;
+        }
+
+        /* Responsive adjustments for smaller screen sizes */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.75rem; /* Adjust for smaller devices */
+            }
+        }
+
+        header h1 span {
+            display: block; /* Ensures the title appears in two lines */
+        }
+
+        nav {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #333; /* Dark link background */
+            transition: background-color 0.3s ease;
+            font-size: 0.8rem; /* 20% smaller than the original */
+        }
+
+        nav a:hover {
+            background-color: #E27D60; /* Highlight color */
+        }
+
+        .search-bar {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 8px 15px;
+            font-size: 1rem;
+            border: 1px solid #555; /* Dark grey border */
+            border-radius: 5px;
+            width: 300px;
+            background-color: #2c2c2c; /* Dark background for input */
+            color: #e0e0e0; /* Light text in input */
+        }
+
+        .search-bar button {
+            padding: 8px 15px;
+            font-size: 1rem;
+            background-color: #5C5C5C;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .search-bar button:hover {
+            background-color: #E27D60; /* Hover effect for search button */
+        }
+
+        .blog-posts {
+            margin-top: 40px;
+        }
+
+        .post {
+            background-color: #1e1e1e; /* Dark post background */
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .post h2 {
+            font-size: 2rem;
+            color: #e0e0e0; /* Light text for title */
+        }
+
+        .post p {
+            font-size: 1.2rem;
+            color: #b0b0b0; /* Slightly lighter text for paragraph */
+            margin-top: 10px;
+        }
+
+        .post .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #E27D60;
+            text-decoration: none;
+        }
+
+        .post .read-more:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 10px;
+            background-color: #1f1f1f; /* Dark footer background */
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1><span>Melvin Butters</span><span>Game Master Blog</span></h1>
+        <nav>
+            <a href="#">DM Articles</a>
+            <a href="#">Free Adventures</a>
+            <a href="#">Homebrew Items</a>
+            <a href="#">Homebrew Classes</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search blog posts..." />
+            <button onclick="searchPosts()">Search</button>
+        </div>
+    </header>
+
+    <div class="blog-posts">
+        <!-- Adventure Introduction -->
+        <div class="post" id="post1">
+            <h2>Into the Abyss: A D&D Adventure</h2>
+            <p>Deep within the shadows of the forgotten lands, a hidden portal to the Abyss has been unearthed. The ancient evil that resides within stirs once more, threatening to spill forth into the world. Will your party brave the dangers of this forsaken place, unravel its mysteries, and put an end to the nightmare, or will they fall prey to the unrelenting horrors lurking within?</p>
+            <p>Prepare yourself, adventurer, for a journey where courage, wit, and strength will be tested. The Abyss awaits, and its dark secrets may change the fate of the realms forever...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+
+        <!-- Link for PDF and Maps -->
+        <div class="post" id="post2">
+            <h2>Download Your Adventure Materials</h2>
+            <p>Download the full PDF of "Into the Abyss" and all the maps needed to guide your players through the treacherous landscapes and infernal chambers.</p>
+            <ul>
+                <li><a href="#" class="read-more">Download PDF</a></li>
+                <li><a href="#" class="read-more">Download Maps</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Adventures in Dungeons & Dragons. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle search functionality
+        function searchPosts() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const posts = document.querySelectorAll(".post");
+
+            posts.forEach(post => {
+                const title = post.querySelector("h2").innerText.toLowerCase();
+                const content = post.querySelector("p").innerText.toLowerCase();
+
+                if (title.includes(input) || content.includes(input)) {
+                    post.style.display = "block";
+                } else {
+                    post.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
