@@ -1,104 +1,156 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article Storage</title>
+    <title>Add New Article - Game Master Blog</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/0/0e/Dungeons_and_dragons_logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> <!-- Cinzel Font -->
+
     <style>
+        /* Reset and General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text */
+            line-height: 1.6;
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        h1 {
-            color: #333;
+
+        header {
+            background-color: #1f1f1f;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
-        .article-list {
-            list-style-type: none;
-            padding: 0;
+
+        header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.45rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: white;
+            line-height: 1.2;
         }
-        .article-item {
-            background-color: #fff;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        header h1 span {
+            display: block;
         }
-        .article-title {
-            font-size: 1.5em;
-            color: #0073e6;
+
+        .form-container {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .article-date {
-            font-size: 0.9em;
-            color: #888;
+
+        label {
+            font-size: 1rem;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+            display: block;
         }
-        .article-content {
-            font-size: 1.1em;
-            color: #555;
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            background-color: #2c2c2c;
+            color: #e0e0e0;
         }
+
+        input[type="url"], input[type="text"], textarea {
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #E27D60;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #d57f58;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 10px;
+            background-color: #1f1f1f;
+            color: white;
+        }
+
     </style>
 </head>
+
 <body>
-    <h1>Article Storage</h1>
-    <ul id="article-list" class="article-list">
-        <!-- Articles will be inserted here -->
-    </ul>
+
+    <header>
+        <h1><span>Melvin Butters</span><span>Game Master Blog</span></h1>
+    </header>
+
+    <div class="form-container">
+        <h2>Add a New Article</h2>
+        <form id="article-form">
+            <label for="title">Article Title</label>
+            <input type="text" id="title" name="title" placeholder="Enter article title" required>
+
+            <label for="url">Article URL</label>
+            <input type="url" id="url" name="url" placeholder="Enter the URL of the article" required>
+
+            <label for="date">Date (Australian Format - DD/MM/YYYY)</label>
+            <input type="text" id="date" name="date" placeholder="e.g., 06/04/2025" required>
+
+            <label for="content">Article Content</label>
+            <textarea id="content" name="content" rows="6" placeholder="Enter article content" required></textarea>
+
+            <button type="submit">Add Article</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Adventures in Dungeons & Dragons. All rights reserved.</p>
+    </footer>
 
     <script>
-        const articles = [
-            {
-                title: "First Article",
-                date: "2025-04-06",
-                content: "This is the content of the first article."
-            },
-            {
-                title: "Second Article",
-                date: "2024-11-15",
-                content: "This is the content of the second article."
-            },
-            {
-                title: "Third Article",
-                date: "2023-08-25",
-                content: "This is the content of the third article."
-            }
-        ];
+        document.getElementById('article-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const title = document.getElementById('title').value;
+            const url = document.getElementById('url').value;
+            const date = document.getElementById('date').value;
+            const content = document.getElementById('content').value;
 
-        // Function to sort articles by date (Australian format - DD/MM/YYYY)
-        articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+            const newArticle = {
+                title: title,
+                url: url,
+                date: date.split('/').reverse().join('-'), // Convert DD/MM/YYYY to YYYY-MM-DD format for sorting
+                content: content
+            };
 
-        // Function to display articles
-        function displayArticles() {
-            const articleList = document.getElementById('article-list');
-            articleList.innerHTML = ''; // Clear existing articles
-
-            articles.forEach(article => {
-                const listItem = document.createElement('li');
-                listItem.className = 'article-item';
-                
-                const title = document.createElement('h2');
-                title.className = 'article-title';
-                title.textContent = article.title;
-                
-                const date = document.createElement('p');
-                date.className = 'article-date';
-                const formattedDate = new Date(article.date).toLocaleDateString('en-AU');
-                date.textContent = `Published on: ${formattedDate}`;
-                
-                const content = document.createElement('p');
-                content.className = 'article-content';
-                content.textContent = article.content;
-
-                listItem.appendChild(title);
-                listItem.appendChild(date);
-                listItem.appendChild(content);
-                articleList.appendChild(listItem);
-            });
-        }
-
-        // Call the function to display articles
-        displayArticles();
+            // Handle article submission here (e.g., store it locally or in a database)
+            alert('Article Added!');
+        });
     </script>
+
 </body>
+
 </html>
