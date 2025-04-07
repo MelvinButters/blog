@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 
-/* Main Blog Title */
+/* Main Title */
 h1 {
     color: white;
     font-family: 'Cinzel', serif;
@@ -18,20 +18,13 @@ h1 {
     border-bottom: 3px solid #444;  /* Bottom border for emphasis */
 }
 
-/* Blog Description Section */
+/* Blog Description Styles */
 .blog-description {
-    background-color: #555;  /* Darker background for description */
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  /* Add shadow for depth */
-}
-
-.blog-description p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: white;
-    text-align: center;
+    font-size: 1.2em;  /* Smaller font size */
+    text-align: center;  /* Center align the description */
+    margin-top: 10px;
+    color: #bbb;  /* Slightly lighter color for description */
+    padding-bottom: 20px;  /* Padding for spacing */
 }
 
 /* Navigation Bar Styles */
@@ -84,7 +77,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  /* Add a shadow for depth */
 }
 
-/* Highlighted Articles Section */
+/* Highlighted Articles */
 .highlighted-articles {
     display: flex;
     justify-content: space-between;
@@ -119,4 +112,13 @@ nav ul li a:hover {
     font-size: 0.9em;
     color: #bbb;  /* Lighter grey for article footers */
     margin-top: 20px;
+}
+
+/* Additional Dark Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 3px solid #444;
 }
