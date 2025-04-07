@@ -11,29 +11,36 @@ body {
 nav {
     background-color: #333;
     color: white;
-    padding: 10px;
-    display: flex;  /* Enable Flexbox */
-    justify-content: center;  /* Center the navbar links horizontally */
+    padding: 20px 0;  /* Increased padding for a bigger navbar */
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;  /* Display the list items horizontally */
+    display: flex;
 }
 
 nav ul li {
-    margin-right: 15px;  /* Space between the links */
+    margin-right: 30px;  /* Increased space between links */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 24px;  /* Larger text size */
+    font-family: 'Comic Sans MS', 'Arial', cursive;  /* Bubbly, playful font */
+    padding: 10px 20px;  /* Extra padding for a more prominent button-like effect */
+    border-radius: 30px;  /* Rounded corners for the "bubbly" effect */
+    transition: all 0.3s ease-in-out;  /* Smooth transition effect for hover */
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+    background-color: #555;  /* Slight background change on hover */
+    transform: scale(1.1);  /* Slightly increase the size on hover */
 }
 
 /* Container for main content */
@@ -70,15 +77,4 @@ h1 {
 .article a {
     text-decoration: none;
     color: #007bff;
-}
-
-.article a:hover {
-    text-decoration: underline;
-}
-
-/* Footer for articles */
-.article-footer {
-    font-size: 0.9em;
-    color: #777;
-    margin-top: 20px;
 }
