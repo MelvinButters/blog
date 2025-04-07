@@ -5,14 +5,14 @@ const header = document.getElementById('header');
 header.innerHTML = `
     <div class="top-section">
         <!-- Main Blog Title -->
-        <h1>Welcome to My Blog</h1>
+        <h1>The Game Master Society</h1>
 
         <!-- Optional Image (e.g., logo) -->
         <img src="path/to/your/image.png" alt="Logo" class="logo">
 
         <!-- Blog Description -->
         <div class="blog-description">
-            <p>Welcome to my blog, where I share my thoughts on various topics, from tech to travel.</p>
+            <p>A discussion of Pathfinder and Starfinder - TTRPG's by Paizo.</p>
         </div>
     </div>
 `;
