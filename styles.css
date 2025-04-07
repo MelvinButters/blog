@@ -12,7 +12,7 @@ body {
     background-color: #8B0000;  /* Dark Red background */
     color: #f1e1c1;  /* Pale yellow/skin tone color */
     text-align: center;  /* Center align both title and description */
-    padding: 10px 20px;  /* Reduce space around the section */
+    padding: 20px 20px;  /* Adjusted padding for a more balanced look */
     margin-bottom: 10px;  /* Small gap between the title/description and navbar */
 }
 
@@ -29,13 +29,13 @@ body {
 .blog-description {
     font-family: 'Cinzel', serif;  /* Apply Cinzel font */
     font-size: 1.2em;  /* Smaller font size */
-    margin-top: 5px;  /* Small margin between title and description */
+    margin-top: 10px;  /* Slightly increased margin between title and description */
     padding: 0;  /* Remove any extra padding */
     color: #f1e1c1;  /* Ensure the description uses the same color */
 }
 
 /* Navigation Bar Styles */
-nav {
+#navbar {
     background-color: #444;  /* Darker grey for navbar section */
     color: white;
     padding: 20px 0;
