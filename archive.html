@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Article Archive</title>
+    
+    <!-- Link to Cinzel font from Google Fonts (same as first HTML) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+    <!-- Link to External Stylesheet (same as first HTML) -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar (Injected from navbar.js) -->
+    <!-- Injected Header Section (handled by header.js) -->
+    <div id="header"></div>
+
+    <!-- Placeholder for Navbar (handled by navbar.js) -->
     <div id="navbar"></div>
 
     <!-- Archive Section -->
@@ -25,7 +33,8 @@
         </div>
     </div>
 
-    <!-- JavaScript to load navbar from external file -->
+    <!-- JavaScript to load the Navbar and Header from external files -->
     <script src="navbar.js"></script>
+    <script src="header.js"></script>
 </body>
 </html>
