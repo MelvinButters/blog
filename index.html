@@ -69,9 +69,7 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Blog</h1>
-    </header>
+    <header></header> <!-- Navbar will be inserted here -->
 
     <div class="container">
         <button id="sort-button" onclick="sortPosts()">Sorting by Latest</button>
@@ -86,6 +84,16 @@
     </footer>
 
     <script>
+        // Load the navigation bar dynamically
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('header').innerHTML = data;
+                })
+                .catch(error => console.log('Error loading navbar:', error));
+        });
+
         // Blog posts data (in an array)
         const posts = [
             {
