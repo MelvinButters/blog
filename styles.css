@@ -7,24 +7,29 @@ body {
     padding: 0;
 }
 
+/* Main Title and Description Section */
+.top-section {
+    background-color: #8B0000;  /* Dark Red background */
+    color: #f1e1c1;  /* Pale yellow/skin tone color */
+    text-align: center;  /* Center align both title and description */
+    padding: 10px 20px;  /* Reduce space around the section */
+    margin-bottom: 10px;  /* Small gap between the title/description and navbar */
+}
+
 /* Main Title */
 h1 {
-    color: white;
     font-family: 'Cinzel', serif;  /* Apply Cinzel font */
     font-size: 48px;  /* Larger title text */
-    text-align: center;
-    margin-top: 20px;
-    padding-bottom: 10px;
+    margin: 0;  /* Remove margin */
+    padding: 0;  /* Remove padding */
 }
 
 /* Blog Description Styles */
 .blog-description {
     font-family: 'Cinzel', serif;  /* Apply Cinzel font */
     font-size: 1.2em;  /* Smaller font size */
-    text-align: center;  /* Center align the description */
-    margin-top: 10px;
-    color: #bbb;  /* Slightly lighter color for description */
-    padding-bottom: 20px;  /* Padding for spacing */
+    margin-top: 5px;  /* Small margin between title and description */
+    padding: 0;  /* Remove any extra padding */
 }
 
 /* Navigation Bar Styles */
@@ -52,7 +57,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 36px;
-    font-family: 'Cinzel', serif;  /* Apply Cinzel font */
+    font-family: 'Cinzel', serif;
     font-weight: bold;
     padding: 15px 30px;
     border-radius: 10px;
