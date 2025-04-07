@@ -5,25 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog</title>
     
-    <!-- Link to Taroca font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Taroca&display=swap" rel="stylesheet">
+    <!-- Link to Cinzel font from Google Fonts (since you're using Cinzel for the body and navbar) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
 
     <!-- Link to External Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Main Blog Title and Description Section -->
-    <div class="top-section">
-        <!-- Main Blog Title -->
-        <h1>Welcome to My Blog</h1>
+    <!-- Injected Header Section (handled by header.js) -->
+    <div id="header"></div>
 
-        <!-- Blog Description -->
-        <div class="blog-description">
-            <p>Welcome to my blog, where I share my thoughts on various topics, from tech to travel.</p>
-        </div>
-    </div>
-
-    <!-- Placeholder for Navbar -->
+    <!-- Placeholder for Navbar (handled by navbar.js) -->
     <div id="navbar"></div>
 
     <!-- Main Blog Content -->
@@ -47,7 +39,8 @@
         </div>
     </div>
 
-    <!-- JavaScript to load navbar from external file -->
+    <!-- JavaScript to load the Navbar and Header from external files -->
     <script src="navbar.js"></script>
+    <script src="header.js"></script>
 </body>
 </html>
