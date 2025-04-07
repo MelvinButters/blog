@@ -1,10 +1,13 @@
-document.getElementById("navbar").innerHTML = `
+// navbar.js
+
+const navbar = document.getElementById('navbar');
+
+navbar.innerHTML = `
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 `;
