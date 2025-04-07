@@ -17,11 +17,12 @@ body {
 }
 
 /* Main Title */
-h1 {
+.top-section h1 {
     font-family: 'Cinzel', serif;  /* Apply Cinzel font */
     font-size: 48px;  /* Larger title text */
     margin: 0;  /* Remove margin */
     padding: 0;  /* Remove padding */
+    color: #f1e1c1;  /* Ensure the title uses the pale yellow/skin tone color */
 }
 
 /* Blog Description Styles */
@@ -30,6 +31,7 @@ h1 {
     font-size: 1.2em;  /* Smaller font size */
     margin-top: 5px;  /* Small margin between title and description */
     padding: 0;  /* Remove any extra padding */
+    color: #f1e1c1;  /* Ensure the description uses the same color */
 }
 
 /* Navigation Bar Styles */
