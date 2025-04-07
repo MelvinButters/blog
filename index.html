@@ -4,164 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            margin: 0;
-        }
-        .post {
-            border-bottom: 1px solid #ddd;
-            padding: 15px 0;
-        }
-        .post h2 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .post p {
-            color: #555;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #333;
-            color: white;
-            border: none;
-            margin-bottom: 20px;
-        }
-        button:hover {
-            background-color: #555;
-        }
-        a {
-            text-decoration: none;
-            color: #333;
-        }
-        a:hover {
-            color: #0066cc;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header></header> <!-- Navbar will be inserted here -->
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
 
+    <!-- Main Blog Content -->
     <div class="container">
-        <button id="sort-button" onclick="sortPosts()">Sorting by Latest</button>
-
-        <div id="post-container">
-            <!-- Blog posts will be dynamically inserted here -->
+        <h1>Welcome to My Blog</h1>
+        <div class="highlighted-articles">
+            <div class="article">
+                <h2>Highlighted Article 1</h2>
+                <p>This is a short preview of the article content...</p>
+                <a href="#">Read more</a>
+            </div>
+            <div class="article">
+                <h2>Highlighted Article 2</h2>
+                <p>This is a short preview of the article content...</p>
+                <a href="#">Read more</a>
+            </div>
+            <div class="article">
+                <h2>Highlighted Article 3</h2>
+                <p>This is a short preview of the article content...</p>
+                <a href="#">Read more</a>
+            </div>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 My Blog. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Load the navigation bar dynamically
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('navbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.querySelector('header').innerHTML = data;
-                })
-                .catch(error => console.log('Error loading navbar:', error));
-        });
-
-        // Blog posts data (in an array)
-        const posts = [
-            {
-                title: "Making Characters Matter",
-                date: "2025-04-06",
-                content: "This is the introduction to the first blog post. You can add more content here.",
-                link: "post1.html"  // Placeholder link to the individual post
-            },
-            {
-                title: "Prewritten Adventure Tips",
-                date: "2025-04-05",
-                content: "This is the introduction to the second blog post. You can add more content here.",
-                link: "post2.html"  // Placeholder link to the individual post
-            },
-            {
-                title: "Beginning as a Game Master",
-                date: "2025-04-04",
-                content: "Starting your journey as a Game Master, and your very first session.",
-                link: "articles/beginning.html"  // Placeholder link to the individual post
-            }
-        ];
-
-        let isDescending = true; // We start by sorting latest (newest first)
-
-        // Function to render posts to the page
-        function renderPosts() {
-            const postContainer = document.getElementById('post-container');
-            postContainer.innerHTML = ''; // Clear current posts
-            posts.forEach(post => {
-                const postElement = document.createElement('section');
-                postElement.classList.add('post');
-                postElement.innerHTML = ` 
-                    <h2><a href="${post.link}">${post.title}</a></h2>
-                    <p>Posted on ${formatDateForAustralia(post.date)}</p>
-                    <p>${post.content}</p>
-                `;
-                postContainer.appendChild(postElement);
-            });
-        }
-
-        // Function to format date in DD/MM/YYYY (Australian format)
-        function formatDateForAustralia(dateString) {
-            const date = new Date(dateString);
-            const day = String(date.getDate()).padStart(2, '0');
-            const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
-            const year = date.getFullYear();
-            return `${day}/${month}/${year}`;
-        }
-
-        // Function to sort posts by date (newest first or oldest first)
-        function sortPosts() {
-            if (isDescending) {
-                // Sort by date in descending order (newest first)
-                posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-                // Change button text to "Sorting by Oldest"
-                document.getElementById("sort-button").textContent = "Sorting by Oldest";
-            } else {
-                // Sort by date in ascending order (oldest first)
-                posts.sort((a, b) => new Date(a.date) - new Date(b.date));
-                // Change button text to "Sorting by Latest"
-                document.getElementById("sort-button").textContent = "Sorting by Latest";
-            }
-            isDescending = !isDescending; // Toggle the sort order
-            renderPosts(); // Re-render the posts after sorting
-        }
-
-        // Initially render the posts in descending order (newest first)
-        renderPosts();
-    </script>
+    <!-- JavaScript to load navbar from external file -->
+    <script src="navbar.js"></script>
 </body>
 </html>
