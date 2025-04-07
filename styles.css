@@ -1,131 +1,53 @@
-/* General Styles */
-body {
-    font-family: 'Cinzel', serif;
-    background-color: #2c2c2c;  /* Dark grey background */
-    color: white;  /* White text */
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    
+    <!-- Link to Cinzel font from Google Fonts (since you're using Cinzel for the body and navbar) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
 
-/* Main Title and Description Section */
-.top-section {
-    background-color: #8B0000;  /* Dark Red background */
-    color: #f1e1c1;  /* Pale yellow/skin tone color */
-    text-align: center;  /* Center align both title and description */
-    padding: 20px 20px;  /* Adjusted padding for a more balanced look */
-    margin-bottom: 10px;  /* Small gap between the title/description and navbar */
-}
+    <!-- Link to External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Injected Header Section (handled by header.js) -->
+    <div id="header"></div>
 
-/* Main Title */
-.top-section h1 {
-    font-family: 'Cinzel', serif;  /* Apply Cinzel font */
-    font-size: 48px;  /* Larger title text */
-    margin: 0;  /* Remove margin */
-    padding: 0;  /* Remove padding */
-    color: #f1e1c1;  /* Ensure the title uses the pale yellow/skin tone color */
-}
+    <!-- Placeholder for Navbar (handled by navbar.js) -->
+    <div id="navbar"></div>
 
-/* Blog Description Styles */
-.blog-description {
-    font-family: 'Cinzel', serif;  /* Apply Cinzel font */
-    font-size: 1.2em;  /* Smaller font size */
-    margin-top: 10px;  /* Slightly increased margin between title and description */
-    padding: 0;  /* Remove any extra padding */
-    color: #f1e1c1;  /* Ensure the description uses the same color */
-}
+    <!-- Main Blog Content -->
+    <div class="container">
+        <div class="highlighted-articles">
+            <div class="article">
+                <h2>Highlighted Article 1</h2>
+                <p>This is a short preview of the article content...</p>
+                <a href="articletemplate.html">Read more</a>
+            </div>
+            <div class="article">
+                <h2>Highlighted Article 2</h2>
+                <p>This is a short preview of the article content...</p>
+                <a href="#">Read more</a>
+            </div>
+            <div class="article">
+                <h2>Highlighted Article 3</h2>
+                <p>This is a short preview of the article content...</p>
+                <a href="#">Read more</a>
+            </div>
+        </div>
 
-/* Navigation Bar Styles */
-#navbar {
-    background-color: #444;  /* Darker grey for navbar section */
-    color: white;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    border-bottom: 3px solid #555;  /* Darker outline for navbar */
-}
+        <!-- New Section for Updates or Longer Content -->
+        <div class="updates-section">
+            <h2>Upcoming Updates</h2>
+            <p>We are excited to announce a variety of new features and updates that will be rolling out soon. These include...</p>
+            <p>Stay tuned for more details!</p>
+        </div>
+    </div>
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 40px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 36px;
-    font-family: 'Cinzel', serif;
-    font-weight: bold;
-    padding: 15px 30px;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
-    border: 2px solid transparent;  /* Transparent border for now */
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-    background-color: #555;  /* Slightly lighter grey on hover */
-    transform: scale(1.1);
-    border-color: white;  /* White outline on hover */
-}
-
-/* Container for main content */
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #3a3a3a;  /* Darker grey for main content */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  /* Add a shadow for depth */
-}
-
-/* Highlighted Articles */
-.highlighted-articles {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.article {
-    background-color: #555;  /* Darker background for articles */
-    padding: 20px;
-    border-radius: 10px;
-    width: 30%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  /* Slight shadow for articles */
-    border: 2px solid #444;  /* Dark grey border */
-}
-
-.article h2 {
-    color: white;
-    margin-top: 0;
-}
-
-.article a {
-    text-decoration: none;
-    color: #007bff;  /* Blue links to stand out */
-}
-
-.article a:hover {
-    text-decoration: underline;
-}
-
-/* Footer for articles */
-.article-footer {
-    font-size: 0.9em;
-    color: #bbb;  /* Lighter grey for article footers */
-    margin-top: 20px;
-}
-
-/* Additional Dark Styling */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    border-top: 3px solid #444;
-}
+    <!-- JavaScript to load the Navbar and Header from external files -->
+    <script src="navbar.js"></script>
+    <script src="header.js"></script>
+</body>
+</html>
