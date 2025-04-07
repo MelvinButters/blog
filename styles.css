@@ -12,16 +12,19 @@ nav {
     background-color: #333;
     color: white;
     padding: 10px;
+    display: flex;  /* Enable Flexbox */
+    justify-content: center;  /* Center the navbar links horizontally */
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex;  /* Display the list items horizontally */
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 15px;
+    margin-right: 15px;  /* Space between the links */
 }
 
 nav ul li a {
