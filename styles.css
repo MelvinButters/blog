@@ -11,7 +11,7 @@ body {
 nav {
     background-color: #333;
     color: white;
-    padding: 20px 0;  /* Increased padding for a bigger navbar */
+    padding: 20px 0;
     display: flex;
     justify-content: center;
 }
@@ -24,17 +24,17 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 40px;  /* Increased space between links */
+    margin-right: 40px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 36px;  /* Significantly larger text size */
-    font-family: 'Impact', 'Arial', sans-serif;  /* Blocky, bold font */
-    font-weight: bold;  /* Make the text bold */
-    padding: 15px 30px;  /* More padding for a prominent look */
-    border-radius: 10px;  /* Slightly rounded corners */
+    font-size: 36px;  /* Larger text size */
+    font-family: 'Cinzel', serif;  /* Dungeons & Dragons-inspired font */
+    font-weight: bold;  /* Bold for extra emphasis */
+    padding: 15px 30px;
+    border-radius: 10px;
     transition: all 0.3s ease-in-out;  /* Smooth transition for hover effect */
 }
 
