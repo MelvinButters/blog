@@ -1,8 +1,10 @@
-document.addEventListener("DOMContentLoaded", function() {
-  fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.querySelector('header').innerHTML = data;
-    })
-    .catch(error => console.log('Error loading navbar:', error));
-});
+document.getElementById("navbar").innerHTML = `
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+`;
