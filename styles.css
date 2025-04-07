@@ -24,23 +24,24 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 30px;  /* Increased space between links */
+    margin-right: 40px;  /* Increased space between links */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 24px;  /* Larger text size */
-    font-family: 'Comic Sans MS', 'Arial', cursive;  /* Bubbly, playful font */
-    padding: 10px 20px;  /* Extra padding for a more prominent button-like effect */
-    border-radius: 30px;  /* Rounded corners for the "bubbly" effect */
-    transition: all 0.3s ease-in-out;  /* Smooth transition effect for hover */
+    font-size: 36px;  /* Significantly larger text size */
+    font-family: 'Impact', 'Arial', sans-serif;  /* Blocky, bold font */
+    font-weight: bold;  /* Make the text bold */
+    padding: 15px 30px;  /* More padding for a prominent look */
+    border-radius: 10px;  /* Slightly rounded corners */
+    transition: all 0.3s ease-in-out;  /* Smooth transition for hover effect */
 }
 
 nav ul li a:hover {
     text-decoration: underline;
-    background-color: #555;  /* Slight background change on hover */
-    transform: scale(1.1);  /* Slightly increase the size on hover */
+    background-color: #555;  /* Darker background on hover */
+    transform: scale(1.1);  /* Slightly enlarge the text on hover */
 }
 
 /* Container for main content */
@@ -77,4 +78,15 @@ h1 {
 .article a {
     text-decoration: none;
     color: #007bff;
+}
+
+.article a:hover {
+    text-decoration: underline;
+}
+
+/* Footer for articles */
+.article-footer {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 20px;
 }
