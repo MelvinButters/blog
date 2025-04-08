@@ -164,7 +164,7 @@ footer {
     }
 
     nav ul li a {
-        font-size: 9px;  /* Make font even smaller on mobile */
+        font-size: 23px;  /* Increased font size by 30% (18px + 30%) */
         padding: 10px 15px;  /* Reduce padding to fit */
     }
 
