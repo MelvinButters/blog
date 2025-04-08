@@ -38,7 +38,7 @@ body {
 #navbar {
     background-color: #444;  /* Darker grey for navbar section */
     color: white;
-    padding: 15px 0;  /* Reduced padding */
+    padding: 20px 0;
     display: flex;
     justify-content: center;
     border-bottom: 3px solid #555;  /* Darker outline for navbar */
@@ -52,16 +52,16 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 30px;  /* Reduced margin */
+    margin-right: 40px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 30px;  /* Reduced font size */
+    font-size: 18px;  /* Reduced font size by 50% from 36px */
     font-family: 'Cinzel', serif;
     font-weight: bold;
-    padding: 10px 20px;  /* Reduced padding */
+    padding: 15px 30px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
     border: 2px solid transparent;  /* Transparent border for now */
@@ -153,6 +153,21 @@ footer {
 
 /* Mobile Specific Styles */
 @media (max-width: 768px) {
+    /* Keep navbar horizontal on mobile */
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin-right: 20px;  /* Adjusted space between menu items */
+    }
+
+    nav ul li a {
+        font-size: 9px;  /* Make font even smaller on mobile */
+        padding: 10px 15px;  /* Reduce padding to fit */
+    }
+
     /* Stack articles vertically on mobile */
     .highlighted-articles {
         flex-direction: column;
@@ -162,20 +177,5 @@ footer {
     .article {
         width: 90%;  /* Make articles wider on mobile */
         margin-bottom: 20px;
-    }
-
-    /* Make navbar items vertical on small screens */
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;  /* Space between menu items */
-    }
-
-    nav ul li a {
-        font-size: 24px;  /* Reduce font size for mobile */
-        padding: 10px;    /* Adjust padding for smaller viewports */
     }
 }
