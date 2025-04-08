@@ -1,47 +1,44 @@
 /* General Styles */
 body {
     font-family: 'Cinzel', serif;
-    background-color: #2c2c2c;  /* Dark grey background */
-    color: white;  /* White text */
+    background-color: #2c2c2c;
+    color: white;
     margin: 0;
     padding: 0;
 }
 
 /* Main Title and Description Section */
 .top-section {
-    background-color: #8B0000;  /* Dark Red background */
-    color: #f1e1c1;  /* Pale yellow/skin tone color */
-    text-align: center;  /* Center align both title and description */
-    padding: 20px 20px;  /* Adjusted padding for a more balanced look */
-    margin-bottom: 10px;  /* Small gap between the title/description and navbar */
+    background-color: #8B0000;
+    color: #f1e1c1;
+    text-align: center;
+    padding: 20px 20px;
+    margin-bottom: 10px;
 }
 
-/* Main Title */
 .top-section h1 {
-    font-family: 'Cinzel', serif;  /* Apply Cinzel font */
-    font-size: 48px;  /* Larger title text */
-    margin: 0;  /* Remove margin */
-    padding: 0;  /* Remove padding */
-    color: #f1e1c1;  /* Ensure the title uses the pale yellow/skin tone color */
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+    color: #f1e1c1;
 }
 
-/* Blog Description Styles */
 .blog-description {
-    font-family: 'Cinzel', serif;  /* Apply Cinzel font */
-    font-size: 1.2em;  /* Smaller font size */
-    margin-top: 10px;  /* Slightly increased margin between title and description */
-    padding: 0;  /* Remove any extra padding */
-    color: #f1e1c1;  /* Ensure the description uses the same color */
+    font-size: 1.2em;
+    margin-top: 10px;
+    padding: 0;
+    color: #f1e1c1;
 }
 
 /* Navigation Bar Styles */
 #navbar {
-    background-color: #444;  /* Darker grey for navbar section */
+    background-color: #444;
     color: white;
     padding: 20px 0;
     display: flex;
     justify-content: center;
-    border-bottom: 3px solid #555;  /* Darker outline for navbar */
+    border-bottom: 3px solid #555;
+    position: relative;
 }
 
 nav ul {
@@ -64,14 +61,24 @@ nav ul li a {
     padding: 15px 30px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
-    border: 2px solid transparent;  /* Transparent border for now */
+    border: 2px solid transparent;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
-    background-color: #555;  /* Slightly lighter grey on hover */
+    background-color: #555;
     transform: scale(1.1);
-    border-color: white;  /* White outline on hover */
+    border-color: white;
+}
+
+/* Mobile Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 36px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
 }
 
 /* Container for main content */
@@ -79,9 +86,9 @@ nav ul li a:hover {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #3a3a3a;  /* Darker grey for main content */
+    background-color: #3a3a3a;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  /* Add a shadow for depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Highlighted Articles */
@@ -92,12 +99,12 @@ nav ul li a:hover {
 }
 
 .article {
-    background-color: #555;  /* Darker background for articles */
+    background-color: #555;
     padding: 20px;
     border-radius: 10px;
     width: 30%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  /* Slight shadow for articles */
-    border: 2px solid #444;  /* Dark grey border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid #444;
 }
 
 .article h2 {
@@ -107,7 +114,7 @@ nav ul li a:hover {
 
 .article a {
     text-decoration: none;
-    color: #007bff;  /* Blue links to stand out */
+    color: #007bff;
 }
 
 .article a:hover {
@@ -116,37 +123,62 @@ nav ul li a:hover {
 
 /* New Section for Updates or Longer Content */
 .updates-section {
-    margin-top: 40px;  /* Space above the updates section */
+    margin-top: 40px;
     padding: 20px;
-    background-color: #444;  /* Dark background to match the theme */
+    background-color: #444;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .updates-section h2 {
     font-size: 32px;
-    color: #f1e1c1;  /* Pale yellow for heading */
-    margin-bottom: 10px;  /* Space below the heading */
+    color: #f1e1c1;
+    margin-bottom: 10px;
 }
 
 .updates-section p {
-    font-size: 1.1em;  /* Slightly larger text for content */
-    color: #ddd;  /* Lighter grey for the text */
-    line-height: 1.6;  /* Increased line height for readability */
+    font-size: 1.1em;
+    color: #ddd;
+    line-height: 1.6;
 }
 
 /* Footer for articles */
 .article-footer {
     font-size: 0.9em;
-    color: #bbb;  /* Lighter grey for article footers */
+    color: #bbb;
     margin-top: 20px;
 }
 
-/* Additional Dark Styling */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    border-top: 3px solid #444;
+/* Mobile Media Queries */
+@media (max-width: 768px) {
+    .highlighted-articles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    /* Adjust navbar for mobile */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
 }
