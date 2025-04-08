@@ -164,7 +164,7 @@ footer {
         margin-bottom: 20px;
     }
 
-    /* Make navbar items horizontal on small screens */
+    /* Make navbar items vertical on small screens */
     nav ul {
         flex-direction: column;
         align-items: center;
