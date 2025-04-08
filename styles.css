@@ -38,7 +38,7 @@ body {
 #navbar {
     background-color: #444;  /* Darker grey for navbar section */
     color: white;
-    padding: 20px 0;
+    padding: 15px 0;  /* Reduced padding */
     display: flex;
     justify-content: center;
     border-bottom: 3px solid #555;  /* Darker outline for navbar */
@@ -52,16 +52,16 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 40px;
+    margin-right: 30px;  /* Reduced margin */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 30px;  /* Reduced font size */
     font-family: 'Cinzel', serif;
     font-weight: bold;
-    padding: 15px 30px;
+    padding: 10px 20px;  /* Reduced padding */
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
     border: 2px solid transparent;  /* Transparent border for now */
@@ -172,5 +172,10 @@ footer {
 
     nav ul li {
         margin-bottom: 10px;  /* Space between menu items */
+    }
+
+    nav ul li a {
+        font-size: 24px;  /* Reduce font size for mobile */
+        padding: 10px;    /* Adjust padding for smaller viewports */
     }
 }
