@@ -1,4 +1,40 @@
-/* Original Navbar Styles */
+/* General Styles */
+body {
+    font-family: 'Cinzel', serif;
+    background-color: #2c2c2c;  /* Dark grey background */
+    color: white;  /* White text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Title and Description Section */
+.top-section {
+    background-color: #8B0000;  /* Dark Red background */
+    color: #f1e1c1;  /* Pale yellow/skin tone color */
+    text-align: center;  /* Center align both title and description */
+    padding: 20px 20px;  /* Adjusted padding for a more balanced look */
+    margin-bottom: 10px;  /* Small gap between the title/description and navbar */
+}
+
+/* Main Title */
+.top-section h1 {
+    font-family: 'Cinzel', serif;  /* Apply Cinzel font */
+    font-size: 48px;  /* Larger title text */
+    margin: 0;  /* Remove margin */
+    padding: 0;  /* Remove padding */
+    color: #f1e1c1;  /* Ensure the title uses the pale yellow/skin tone color */
+}
+
+/* Blog Description Styles */
+.blog-description {
+    font-family: 'Cinzel', serif;  /* Apply Cinzel font */
+    font-size: 1.2em;  /* Smaller font size */
+    margin-top: 10px;  /* Slightly increased margin between title and description */
+    padding: 0;  /* Remove any extra padding */
+    color: #f1e1c1;  /* Ensure the description uses the same color */
+}
+
+/* Navigation Bar Styles */
 #navbar {
     background-color: #444;  /* Darker grey for navbar section */
     color: white;
@@ -38,7 +74,84 @@ nav ul li a:hover {
     border-color: white;  /* White outline on hover */
 }
 
-/* Adjust Navbar when collapsed for mobile */
+/* Container for main content */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #3a3a3a;  /* Darker grey for main content */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  /* Add a shadow for depth */
+}
+
+/* Highlighted Articles */
+.highlighted-articles {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.article {
+    background-color: #555;  /* Darker background for articles */
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  /* Slight shadow for articles */
+    border: 2px solid #444;  /* Dark grey border */
+}
+
+.article h2 {
+    color: white;
+    margin-top: 0;
+}
+
+.article a {
+    text-decoration: none;
+    color: #007bff;  /* Blue links to stand out */
+}
+
+.article a:hover {
+    text-decoration: underline;
+}
+
+/* New Section for Updates or Longer Content */
+.updates-section {
+    margin-top: 40px;  /* Space above the updates section */
+    padding: 20px;
+    background-color: #444;  /* Dark background to match the theme */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.updates-section h2 {
+    font-size: 32px;
+    color: #f1e1c1;  /* Pale yellow for heading */
+    margin-bottom: 10px;  /* Space below the heading */
+}
+
+.updates-section p {
+    font-size: 1.1em;  /* Slightly larger text for content */
+    color: #ddd;  /* Lighter grey for the text */
+    line-height: 1.6;  /* Increased line height for readability */
+}
+
+/* Footer for articles */
+.article-footer {
+    font-size: 0.9em;
+    color: #bbb;  /* Lighter grey for article footers */
+    margin-top: 20px;
+}
+
+/* Additional Dark Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 3px solid #444;
+}
+
+/* Mobile-specific Adjustments */
 @media (max-width: 768px) {
     #navbar {
         border-bottom: none; /* Remove the separator line on mobile */
@@ -64,5 +177,15 @@ nav ul li a:hover {
 
     nav ul li a {
         font-size: 24px; /* Adjust font size for better mobile readability */
+    }
+
+    /* Adjust article layout on mobile */
+    .highlighted-articles {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .article {
+        width: 100%; /* Full width for articles */
     }
 }
