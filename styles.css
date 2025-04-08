@@ -151,41 +151,26 @@ footer {
     border-top: 3px solid #444;
 }
 
-/* Mobile-specific Adjustments */
+/* Mobile Specific Styles */
 @media (max-width: 768px) {
-    #navbar {
-        border-bottom: none; /* Remove the separator line on mobile */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack navbar items vertically on mobile */
-        align-items: center; /* Center the navbar items */
-    }
-
-    nav ul li {
-        margin-right: 0;  /* Remove right margin */
-        margin-bottom: 20px;  /* Add spacing between navbar items */
-    }
-
-    .hamburger {
-        display: block; /* Show hamburger menu on mobile */
-    }
-
-    .menu.active {
-        display: block; /* Show the navbar links when hamburger is active */
-    }
-
-    nav ul li a {
-        font-size: 24px; /* Adjust font size for better mobile readability */
-    }
-
-    /* Adjust article layout on mobile */
+    /* Stack articles vertically on mobile */
     .highlighted-articles {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
     }
 
     .article {
-        width: 100%; /* Full width for articles */
+        width: 90%;  /* Make articles wider on mobile */
+        margin-bottom: 20px;
+    }
+
+    /* Make navbar items horizontal on small screens */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;  /* Space between menu items */
     }
 }
