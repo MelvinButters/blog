@@ -157,15 +157,17 @@ footer {
     nav ul {
         flex-direction: row;
         justify-content: center;
+        padding: 0;
+        margin: 0;
     }
 
     nav ul li {
-        margin-right: 20px;  /* Adjusted space between menu items */
+        margin-right: 10px;  /* Reduced space between menu items */
     }
 
     nav ul li a {
-        font-size: 23px;  /* Increased font size by 30% (18px + 30%) */
-        padding: 10px 15px;  /* Reduce padding to fit */
+        font-size: 22px;  /* Adjusted font size to fit better */
+        padding: 8px 12px;  /* Adjusted padding */
     }
 
     /* Stack articles vertically on mobile */
