@@ -9,8 +9,8 @@ body {
 
 /* Main Title and Description Section */
 .top-section {
-    background-color: #8B0000;  /* Dark Red background */
-    color: #f1e1c1;  /* Pale yellow/skin tone color */
+    background-color: #e0e0e0;  /* Light grey background */
+    color: #2c2c2c;  /* Dark grey text */
     text-align: center;  /* Center align both title and description */
     padding: 20px 20px;  /* Adjusted padding for a more balanced look */
     margin-bottom: 10px;  /* Small gap between the title/description and navbar */
@@ -22,7 +22,7 @@ body {
     font-size: 48px;  /* Larger title text */
     margin: 0;  /* Remove margin */
     padding: 0;  /* Remove padding */
-    color: #f1e1c1;  /* Ensure the title uses the pale yellow/skin tone color */
+    color: #2c2c2c;  /* Dark grey title text */
 }
 
 /* Blog Description Styles */
@@ -31,7 +31,7 @@ body {
     font-size: 1.2em;  /* Smaller font size */
     margin-top: 10px;  /* Slightly increased margin between title and description */
     padding: 0;  /* Remove any extra padding */
-    color: #f1e1c1;  /* Ensure the description uses the same color */
+    color: #2c2c2c;  /* Dark grey text for description */
 }
 
 /* Navigation Bar Styles */
