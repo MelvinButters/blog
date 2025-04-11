@@ -151,7 +151,7 @@ nav ul li a:hover {
     margin-top: 20px;
 }
 
-/* Footer Styling - Updated to Match Header */
+/* Footer Styling - Matches Header */
 footer {
     background-color: #1a1a1a;
     padding: 40px 20px;
@@ -163,16 +163,18 @@ footer {
     width: 100%;
 }
 
-/* Footer Text - Gradient Blue Like Header */
+/* Footer Text Styled Like Header Title */
 footer p,
 footer a {
-    font-size: 16px;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: bolder;
     margin: 10px 0;
     color: transparent;
     background: linear-gradient(45deg, #1e3c72, #2a5298);
     -webkit-background-clip: text;
     background-clip: text;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     display: inline-block;
 }
