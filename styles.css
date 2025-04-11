@@ -152,34 +152,37 @@ nav ul li a:hover {
     margin-top: 20px;
 }
 
-/* Additional Dark Styling */
+/* Footer Styling */
 footer {
-    background-color: #333;  /* Dark background for footer */
+    background-color: #1e3c72;  /* Dark blue background for footer */
     color: white;  /* White text color */
-    padding: 40px 20px;  /* Increased padding for a spacious look */
-    text-align: center;  /* Center the footer content */
-    border-top: 3px solid #444;  /* Darker border for separation */
-    font-size: 14px;  /* Keeping the font size the same for consistency */
+    padding: 40px 20px;  /* Padding for more space around the content */
+    text-align: center;  /* Center-align the content in the footer */
+    border-top: 3px solid #2a5298;  /* Lighter blue border to separate footer from content */
+    font-size: 14px;  /* Keeping the font size consistent */
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Footer paragraph styling */
 footer p {
-    margin: 10px 0;  /* Slight margin for spacing */
-    color: #bbb;  /* Light grey color for paragraph text */
+    margin: 10px 0;  /* Add space between paragraphs */
+    color: #bbb;  /* Lighter grey color for paragraph text */
 }
 
 /* Footer link styling */
 footer a {
-    color: #007bff;  /* Keeping the bright blue color for links */
+    color: #007bff;  /* Bright blue for the links */
     text-decoration: none;  /* Remove underline */
     font-weight: bold;
-    transition: color 0.3s ease;  /* Smooth transition for link hover */
+    transition: color 0.3s ease;  /* Smooth color transition for links */
 }
 
 /* Footer link hover effect */
 footer a:hover {
-    text-decoration: underline;  /* Underline on hover */
-    color: #f1e1c1;  /* Soft light yellow on hover to match the header gradient */
+    text-decoration: underline;  /* Underline links on hover */
+    color: #1e3c72;  /* Darker blue on hover to match the theme */
 }
 
 /* Mobile Specific Styles */
