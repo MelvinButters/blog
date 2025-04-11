@@ -22,7 +22,11 @@ body {
     font-size: 48px;  /* Larger title text */
     margin: 0;  /* Remove margin */
     padding: 0;  /* Remove padding */
-    color: #2c2c2c;  /* Dark grey title text */
+    color: transparent;  /* Make the text color transparent to allow the gradient to show */
+    background: linear-gradient(45deg, #1e3c72, #2a5298);  /* Blue gradient */
+    -webkit-background-clip: text;  /* Clip the background to the text */
+    background-clip: text;  /* For non-webkit browsers */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  /* Subtle shadow to give depth to the text */
 }
 
 /* Blog Description Styles */
