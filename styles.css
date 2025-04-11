@@ -154,11 +154,29 @@ nav ul li a:hover {
 
 /* Additional Dark Styling */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    border-top: 3px solid #444;
+    background-color: #333;  /* Dark background for footer */
+    color: white;  /* White text color */
+    padding: 20px 0;  /* Padding for the footer */
+    text-align: center;  /* Center the text */
+    border-top: 3px solid #444;  /* Dark grey border at the top of the footer */
+    font-size: 14px;  /* Slightly smaller text for the footer */
+}
+
+/* Footer paragraph styling */
+footer p {
+    margin: 5px 0;  /* Small margin between paragraphs */
+    color: #bbb;  /* Light grey color for the disclaimer text */
+}
+
+/* Footer link styling */
+footer a {
+    color: #007bff;  /* Bright blue color for links */
+    text-decoration: none;  /* Remove underline */
+}
+
+/* Footer link hover effect */
+footer a:hover {
+    text-decoration: underline;  /* Underline on hover */
 }
 
 /* Mobile Specific Styles */
