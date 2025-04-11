@@ -12,7 +12,7 @@ header.innerHTML = `
 
         <!-- Blog Description -->
         <div class="blog-description">
-            <p>A discussion of Pathfinder and Starfinder - TTRPG's by Paizo.</p>
+            <p>A discussion of Starfinder - A sci fi TTRPG by Paizo.</p>
         </div>
     </div>
 `;
