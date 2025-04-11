@@ -36,7 +36,11 @@ body {
     font-size: 1.2em;  /* Smaller font size */
     margin-top: 10px;  /* Slightly increased margin between title and description */
     padding: 0;  /* Remove any extra padding */
-    color: #f1e1c1;  /* Light text for description */
+    color: transparent;  /* Make the text color transparent to allow the gradient to show */
+    background: linear-gradient(45deg, #1e3c72, #2a5298);  /* Blue gradient */
+    -webkit-background-clip: text;  /* Clip the background to the text */
+    background-clip: text;  /* For non-webkit browsers */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);  /* Subtle shadow to give depth to the text */
 }
 
 /* Navigation Bar Styles */
