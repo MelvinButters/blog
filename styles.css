@@ -2,6 +2,9 @@
 body {
     font-family: 'Cinzel', serif;
     background-color: #1a1a1a;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    background-repeat: repeat;
+    background-attachment: fixed; /* Optional: gives it a nice parallax feel */
     color: white;
     margin: 0;
     padding: 0;
