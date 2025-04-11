@@ -1,25 +1,4 @@
-/* General Styles */
-body {
-    font-family: 'Cinzel', serif;
-    background-color: #000; /* Fallback color */
-    background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); /* Stardust texture */
-    background-size: cover; /* Ensures the image covers the whole page */
-    background-repeat: repeat; /* Repeat the pattern to cover the whole page */
-    background-attachment: fixed; /* Keeps the background fixed while scrolling */
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
 /* Main Title and Description Section */
-.top-section {
-    background-color: rgba(0, 0, 0, 0.5); /* Slight transparency to make text readable */
-    color: #f1e1c1;
-    text-align: center;
-    padding: 20px 20px;
-    margin-bottom: 10px;
-}
-
 .top-section h1 {
     font-family: 'Cinzel', serif;
     font-size: 48px;
@@ -30,7 +9,7 @@ body {
     background: linear-gradient(45deg, #1e3c72, #2a5298);
     -webkit-background-clip: text;
     background-clip: text;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 0 0 10px white; /* White outline effect */
     text-rendering: optimizeLegibility;
 }
 
@@ -44,116 +23,8 @@ body {
     background: linear-gradient(45deg, #1e3c72, #2a5298);
     -webkit-background-clip: text;
     background-clip: text;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3), 0 0 10px white; /* White outline effect */
     text-rendering: optimizeLegibility;
-}
-
-/* Navigation Bar Styles */
-#navbar {
-    background-color: transparent;
-    color: white;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    border-bottom: 3px solid #555;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 40px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-family: 'Cinzel', serif;
-    font-weight: bold;
-    padding: 15px 30px;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
-    border: 2px solid transparent;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-    background-color: #555;
-    transform: scale(1.1);
-    border-color: white;
-}
-
-/* Container for main content */
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #3a3a3a;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Highlighted Articles */
-.highlighted-articles {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.article {
-    background-color: #555;
-    padding: 20px;
-    border-radius: 10px;
-    width: 30%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    border: 2px solid #444;
-}
-
-.article h2 {
-    color: white;
-    margin-top: 0;
-}
-
-.article a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-.article a:hover {
-    text-decoration: underline;
-}
-
-/* New Section for Updates or Longer Content */
-.updates-section {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #444;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.updates-section h2 {
-    font-size: 32px;
-    color: #f1e1c1;
-    margin-bottom: 10px;
-}
-
-.updates-section p {
-    font-size: 1.1em;
-    color: #ddd;
-    line-height: 1.6;
-}
-
-/* Footer for articles */
-.article-footer {
-    font-size: 0.9em;
-    color: #bbb;
-    margin-top: 20px;
 }
 
 /* Footer Styling - Matches Header */
@@ -180,7 +51,7 @@ footer a {
     background: linear-gradient(45deg, #1e3c72, #2a5298);
     -webkit-background-clip: text;
     background-clip: text;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 0 0 10px white; /* White outline effect */
     text-decoration: none;
     display: inline-block;
     text-rendering: optimizeLegibility;
@@ -225,7 +96,7 @@ footer a:hover {
     /* Adjustments for mobile text clarity */
     .top-section h1 {
         font-size: 36px;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 0 0 10px white; /* White outline effect */
     }
 
     .blog-description {
@@ -235,7 +106,7 @@ footer a:hover {
     footer p,
     footer a {
         font-size: 18px;
-        text-shadow: none;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 0 0 10px white; /* White outline effect */
     }
 
     /* Logo adjustments for mobile */
