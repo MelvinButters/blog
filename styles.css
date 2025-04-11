@@ -4,7 +4,7 @@ body {
     background-color: #000;
     background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
     background-repeat: repeat;
-    background-attachment: fixed; /* Optional: gives it a nice parallax feel */
+    background-attachment: fixed;
     color: white;
     margin: 0;
     padding: 0;
@@ -31,6 +31,7 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-rendering: optimizeLegibility;
 }
 
 /* Blog Description Styles */
@@ -44,16 +45,17 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    text-rendering: optimizeLegibility;
 }
 
 /* Navigation Bar Styles */
 #navbar {
-    background-color: transparent; /* Remove the background */
-    color: white; /* Ensure the text color remains white */
+    background-color: transparent;
+    color: white;
     padding: 20px 0;
     display: flex;
     justify-content: center;
-    border-bottom: 3px solid #555; /* Retain the border */
+    border-bottom: 3px solid #555;
 }
 
 nav ul {
@@ -156,10 +158,10 @@ nav ul li a:hover {
 
 /* Footer Styling - Matches Header */
 footer {
-    background-color: #000; /* Black background for footer */
-    background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); /* Same texture as the header */
-    background-repeat: repeat; /* Ensure it repeats the texture */
-    background-attachment: fixed; /* Optional: creates a parallax scrolling effect */
+    background-color: #000;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    background-repeat: repeat;
+    background-attachment: fixed;
     padding: 40px 20px;
     text-align: center;
     border-top: 3px solid #2a5298;
@@ -167,7 +169,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    box-sizing: border-box; /* Ensures padding doesn't overflow the container */
+    box-sizing: border-box;
 }
 
 /* Footer Text Styled Like Header Title */
@@ -184,8 +186,7 @@ footer a {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     display: inline-block;
-    word-wrap: break-word; /* Prevent text overflow */
-    max-width: 100%; /* Ensure it doesn't go beyond the screen */
+    text-rendering: optimizeLegibility;
 }
 
 /* Footer Link Hover Effect */
@@ -197,21 +198,21 @@ footer a:hover {
 /* Mobile Specific Styles */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Stack the nav items vertically on mobile */
+        flex-direction: column;
         justify-content: center;
         padding: 0;
         margin: 0;
-        align-items: center; /* Ensure the items are centered */
+        align-items: center;
     }
 
     nav ul li {
-        margin-bottom: 10px; /* Space out the nav items on mobile */
-        margin-right: 0; /* Remove the right margin on mobile */
+        margin-bottom: 10px;
+        margin-right: 0;
     }
 
     nav ul li a {
-        font-size: 20px;
-        padding: 8px 12px;
+        font-size: 18px;
+        padding: 10px 15px;
     }
 
     .highlighted-articles {
@@ -224,14 +225,19 @@ footer a:hover {
         margin-bottom: 20px;
     }
 
-    footer {
-        padding: 20px 15px; /* Adjust padding for smaller screens */
+    /* Adjustments for mobile text clarity */
+    .top-section h1 {
+        font-size: 36px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .blog-description {
+        font-size: 1.1em;
     }
 
     footer p,
     footer a {
-        font-size: 16px; /* Make the text smaller on mobile */
-        padding: 0 10px; /* Add some space around the text */
-        word-wrap: break-word; /* Ensure text breaks on smaller screens */
+        font-size: 18px;
+        text-shadow: none;
     }
 }
