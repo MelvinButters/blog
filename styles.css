@@ -156,7 +156,10 @@ nav ul li a:hover {
 
 /* Footer Styling - Matches Header */
 footer {
-    background-color: #000;
+    background-color: #000; /* Black background for footer */
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); /* Same texture as the header */
+    background-repeat: repeat; /* Ensure it repeats the texture */
+    background-attachment: fixed; /* Optional: creates a parallax scrolling effect */
     padding: 40px 20px;
     text-align: center;
     border-top: 3px solid #2a5298;
