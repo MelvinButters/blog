@@ -240,4 +240,11 @@ footer a:hover {
         font-size: 18px;
         text-shadow: none;
     }
+
+    /* Logo adjustments for mobile */
+    .logo {
+        max-width: 150px; /* Resize logo on mobile */
+        width: 100%; /* Ensure logo doesn't overflow */
+        height: auto;
+    }
 }
