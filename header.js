@@ -8,7 +8,7 @@ header.innerHTML = `
         <h1>The Game Master Society</h1>
 
         <!-- Optional Image (e.g., logo) -->
-        <img src="path/to/your/image.png" alt="Logo" class="logo">
+        <img src="starfinder.png" alt="Logo" class="logo">
 
         <!-- Blog Description -->
         <div class="blog-description">
